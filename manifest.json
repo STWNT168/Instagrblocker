@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Focus Blocker",
+  "version": "1.0",
+  "description": "Block or hide addictive features on Instagram",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.instagram.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
